@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/site-icon.ico" />
+    <title>CatsVsDogs</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/style(CMS).css" rel="stylesheet">
+    
+  </head>
+  <body>
+
+      <nav class="navbar navbar-light">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+           <li ><a href="/">Home</a></li>
+           <li class="active"><a href="/edit">Make A Post!</a></li>
+            
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id= "userName" href="/edit"></a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a id="logoutTag" onclick="logout()" href="/login">Logout</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+      <div class="container">
+        <div class="row">
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+
+
+    
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1">
+            
+
+            
+          </div>
+          <div class="col-md-9">
+            <!-- Website Overview -->
+            <div class="panel panel-default">
+              <div class="panel-heading main-color-bg">
+                <h3 class="panel-title">Edit Post</h3>
+              </div>
+              <div class="panel-body">
+                <form id="upload-photos" method="post" action="/api/images/spotlight"  enctype="multipart/form-data">
+                  <div class="form-group" id ="catDogPic">
+                    
+                    <img id="spotlightImage" src="" id="spotlightImage" height="500" width="800"  placeholder="Image" value="">
+                  </div>
+                <div class="form-group">
+                <label>I Prefer Cats (Checked) I Prefer Dogs (unChecked)</label>
+              <input type="checkbox" name="spotlightDVC" id="spotlightDVC" class="form-control" placeholder="Name" onclick="catDogPic()">
+            </div>  
+                <div class="form-group">
+                <label>Name</label>
+              <input type="text" name="spotlightTitle" id="spotlightTitle" class="form-control" placeholder="Name">
+            </div>
+              <div class="form-group">
+              <label>Why do you like Cats/Dogs?</label>
+              <textarea name="spotlightDescription" id="spotlightDescription" class="form-control" placeholder="">
+              </textarea>
+
+                
+              </div>
+              <div class="form-group">
+                <label>Pick a post picture:  </label>
+              <input id="photos" type="file" name="photoss" accept="image/*" >
+             </div>
+                 <input class="btn btn-primary" type="submit" name="Photo Uploads" value="Upload" />
+                </form>
+              </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../js/getUserName.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/spotlight.js"></script>
+    
+    
+    <script src="../../js/bootstrap.min.js"></script>
+  </body>
+</html>
