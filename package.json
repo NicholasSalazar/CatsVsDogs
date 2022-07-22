@@ -15,7 +15,7 @@
     "create-html": "^4.1.0",
     "express": "^4.16.4",
     "express-photo-gallery": "^1.0.9",
-    "file-type": "^10.4.0",
+    "file-type": "^16.5.4",
     "formidable": "^1.2.1",
     "gridfs-stream": "^1.1.1",
     "helmet": "^3.15.0",
